@@ -1,98 +1,25 @@
-var audio = document.getElementById("audio-player");
+console.clear();
 
-$(document).ready(function() {
-  $("#play-button").click(function() {
-    if ($(this).hasClass("unchecked")) {
-      $(this)
-        .addClass("play-active")
-        .removeClass("play-inactive")
-        .removeClass("unchecked");
-      $(".info-two")
-        .addClass("info-active");
-      $("#pause-button")
-        .addClass("scale-animation-active");
-      $(".waves-animation-one, #pause-button, .seek-field, .volume-icon, .volume-field, .info-two").show();
-      $(".waves-animation-two").hide();
-      $("#pause-button")
-        .children('.icon')
-        .addClass("icon-pause")
-        .removeClass("icon-play");
-      setTimeout(function() {
-        $(".info-one").hide();
-      }, 400);
-      audio.play();
-      audio.currentTime = 0;
-    } else {
-      $(this)
-        .removeClass("play-active")
-        .addClass("play-inactive")
-        .addClass("unchecked");
-      $("#pause-button")
-        .children(".icon")
-        .addClass("icon-pause")
-        .removeClass("icon-play");
-      $(".info-two")
-        .removeClass("info-active");
-      $(".waves-animation-one, #pause-button, .seek-field, .volume-icon, .volume-field, .info-two").hide();
-      $(".waves-animation-two").show();
-      setTimeout(function() {
-        $(".info-one").show();
-      }, 150);
-      audio.pause();
-      audio.currentTime = 0;
-    }
-  });
-  $("#pause-button").click(function() {
-    $(this).children(".icon")
-      .toggleClass("icon-pause")
-      .toggleClass("icon-play");
+class musicPlayer {
+	constructor() {
+		this.play = this.play.bind(this);
+		this.playBtn = document.getElementById('play');
+		this.playBtn.addEventListener('click', this.play);
+		this.controlPanel = document.getElementById('control-panel');
+		this.infoBar = document.getElementById('info');
+	}
 
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
-  });
-  $("#play-button").click(function() {
-    setTimeout(function() {
-      $("#play-button").children(".icon")
-        .toggleClass("icon-play")
-        .toggleClass("icon-cancel");
-    }, 350);
-  });
-  $(".like").click(function() {
-    $(".icon-heart").toggleClass("like-active");
-  });
-});
-
-function CreateSeekBar() {
-  var seekbar = document.getElementById("audioSeekBar");
-  seekbar.min = 0;
-  seekbar.max = audio.duration;
-  seekbar.value = 0;
+	play() {
+		let controlPanelObj = this.controlPanel,
+		infoBarObj = this.infoBar
+		Array.from(controlPanelObj.classList).find(function(element){
+					return element !== "active" ? controlPanelObj.classList.add('active') : 		controlPanelObj.classList.remove('active');
+			});
+		
+		Array.from(infoBarObj.classList).find(function(element){
+					return element !== "active" ? infoBarObj.classList.add('active') : 		infoBarObj.classList.remove('active');
+			});
+	}
 }
 
-function EndofAudio() {
-  document.getElementById("audioSeekBar").value = 0;
-}
-
-function audioSeekBar() {
-  var seekbar = document.getElementById("audioSeekBar");
-  audio.currentTime = seekbar.value;
-}
-
-function SeekBar() {
-  var seekbar = document.getElementById("audioSeekBar");
-  seekbar.value = audio.currentTime;
-}
-
-audio.addEventListener("timeupdate", function() {
-  var duration = document.getElementById("duration");
-  var s = parseInt(audio.currentTime % 60);
-  var m = parseInt((audio.currentTime / 60) % 60);
-  duration.innerHTML = m + ':' + s;
-}, false);
-
-Waves.init();
-Waves.attach("#play-button", ["waves-button", "waves-float"]);
-Waves.attach("#pause-button", ["waves-button", "waves-float"]);
+const newMusicplayer = new musicPlayer();
