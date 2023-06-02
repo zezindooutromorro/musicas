@@ -10,15 +10,44 @@
 </head>
 <body>
    
-    <body>
-        <div data-player="music">
-          <span></span>
-          <span id="back">&laquo</span>
-          <span id="pause">||</span>
-          <span id="play">&gt</span>
-          <span id="next">&raquo</span>
+    <div class="container">
+        <audio src="" id="audio"></audio>
+        <div class="player">
+          <div class="popup-container">
+            <div class="popup">
+              <span id="track">Track name</span>
+              <div class="progres">
+                <span id="time">00:00</span>
+                <div class="progres-container">
+                  <div id="progres"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="img">
+              <img src="" id="trackImg" alt="img"/>
+              <div class="animation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="button">
+              <button class="prev-btn" id="prevBtn">
+                <ion-icon name="play-skip-back-outline"></ion-icon>
+              </button>
+              <button class="start-pause" id="playBtn">
+                <ion-icon class="active" name="play-outline"></ion-icon>
+                <ion-icon name="stop-outline"></ion-icon>
+              </button>
+              <button class="next-btn" id="nextBtn">
+                <ion-icon name="play-skip-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
         </div>
-      </body>
+      </div>
       
 
     
