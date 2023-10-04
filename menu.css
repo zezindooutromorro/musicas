@@ -13,14 +13,21 @@ body { background-color: #000000; font-family:Arial; }
 
 footer{
     text-align: center;
-    
+
 }
 
  h1{
     color: #fff;
+    font-size: 120px;
+}
+.antigas{
+    font-size: 120px;
 }
 h2{
     color: #fff;
+}
+.do{
+    font-size: 90px;
 }
 audio{
     align-items: center;
