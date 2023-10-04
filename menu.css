@@ -5,13 +5,13 @@ body{
 
 footer{
     text-align: center;
-    image-rendering: auto;
+    image-resolution: 20px;
 }
 
  h1{
-    color: #fff;
+    color: #020202;
     font-size: 120px;
-}
+
 h1{
     font-size: 120px;
 }
@@ -21,7 +21,7 @@ h2{
 }
 p{
     font-size: 90px;
-    color: #fff;
+    color: #000000;
 }
 audio{
     align-items: right;
