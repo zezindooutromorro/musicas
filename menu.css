@@ -1,34 +1,27 @@
-body { background-color: #000000; font-family:Arial; }
- .contenedor{ width:900px; /*border:2px solid #fff;*/ margin:0px auto; } 
- .col-2{ display:inline-block; width:48%; vertical-align:top; } 
- .titulo{ padding:30px 15px; } 
- .imagen{ background-color:#949494; height:100px; } 
- #text-animation{ color:transparent; font-size:30px; } 
- .ta-letra{ transition: color 0.2s; } 
- body{padding: 0;margin: 0; text-align: center; font-family: Verdana, Geneva, sans-serif; color: gray;} 
- .titulo { background: linear-gradient( to right, rgb(0, 0, 0) 10%, rgb(255, 255, 255) 40%, rgb(0, 0, 0) 60%, rgb(255, 255, 255) 90%); text-align: center; color: #fff; font-family: tahoma; font-weight: lighter; } 
- .titulo span { padding: .5em; display: block; text-transform: uppercase; } 
- .invertido { background: linear-gradient( to right, rgb(255, 255, 255) 30%, rgb(0, 0, 0) 45%, rgb(255, 255, 255) 55%, rgb(0, 0, 0) 70%); } 
- .invertido span { background-color: rgb(0, 0, 0); color: #ffffff; mix-blend-mode: screen; box-shadow: inset 0 1px 0 0 rgb(250, 250, 250), inset 0 -1px 0 0 black; }
+body{
+    background-image: image();
+    background: scroll;
+}
 
 footer{
     text-align: center;
-    a
+    image-rendering: auto;
 }
 
  h1{
     color: #fff;
     font-size: 120px;
 }
-.class{
+h1{
     font-size: 120px;
 }
-.class{
+h2{
     color: #fff;
     text-align: :left
 }
-.class{
+p{
     font-size: 90px;
+    color: #fff;
 }
 audio{
     align-items: right;
