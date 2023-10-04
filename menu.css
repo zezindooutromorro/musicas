@@ -16,7 +16,9 @@ body { background-color: #000000; font-family:Arial; }
  h1{
     color: #fff;
 }
-
+h2{
+    color: #fff;
+}
 audio{
     align-items: center;
 }
