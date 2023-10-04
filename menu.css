@@ -8,11 +8,14 @@ body{
 
 footer{
     text-align: center;
-    image-resolution: 20px;
-    background-image: image();
+
     
 }
-
+footer.img{
+    image-resolution: 20px;
+    background-image: none;
+    align-items: center;
+}
  h1{
     color: #020202;
     font-size: 120px;
