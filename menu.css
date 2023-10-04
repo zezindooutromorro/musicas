@@ -1,12 +1,16 @@
 body{
     background-image: image();
     
+    background: fixed;
+    
     
 }
 
 footer{
     text-align: center;
     image-resolution: 20px;
+    background-image: image();
+    
 }
 
  h1{
