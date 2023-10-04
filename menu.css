@@ -1,9 +1,5 @@
 body{
-    background-image: image();
-    
-    background: fixed;
-    
-    
+    background-color: #000000;    
 }
 
 footer{
@@ -17,21 +13,27 @@ footer.img{
     align-items: center;
 }
  h1{
-    color: #020202;
+    color: #ffffff;
     font-size: 120px;
  }
-h1{
+.antigas{
     font-size: 120px;
 }
-h2{
-    color: #fff;
+.do{
+    color: #464646;
     text-align: left;
 }
-p{
+h1{
     font-size: 90px;
-    color: #000000;
+    color: #ffffff;
+}
+h2{
+    text-align: left;
+    
+
 }
 audio{
     align-items: right;
+    size: 120px;
     
 }
