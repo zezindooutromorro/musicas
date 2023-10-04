@@ -23,12 +23,14 @@ footer{
 .antigas{
     font-size: 120px;
 }
-h2{
+.3{
     color: #fff;
+    text-align: :left
 }
 .do{
     font-size: 90px;
 }
 audio{
     align-items: center;
+    text-align: right;
 }
