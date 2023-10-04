@@ -13,24 +13,24 @@ body { background-color: #000000; font-family:Arial; }
 
 footer{
     text-align: center;
-
+    a
 }
 
  h1{
     color: #fff;
     font-size: 120px;
 }
-.antigas{
+.class{
     font-size: 120px;
 }
-.3{
+.class{
     color: #fff;
     text-align: :left
 }
-.do{
+.class{
     font-size: 90px;
 }
 audio{
-    align-items: center;
-    text-align: right;
+    align-items: right;
+    
 }
